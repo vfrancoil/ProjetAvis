@@ -13,6 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @NoArgsConstructor
 @Data
@@ -27,5 +28,6 @@ public class Classification {
 	@NotNull
 	private String nom;
 	@OneToMany(mappedBy = "classification")
+	@ToString.Exclude
 	private List<Jeu> jeux;
 }

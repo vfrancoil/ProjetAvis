@@ -15,6 +15,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @NoArgsConstructor
 @RequiredArgsConstructor
@@ -51,5 +52,10 @@ public class Jeu {
 	@NonNull
 	@NotNull
 	@ManyToMany
+	@ToString.Exclude
 	private List<Plateforme> plateformes;
+	@NotNull
+	@NonNull
+	@ManyToOne
+	private ModeleEconomique modeleEconomique;
 }

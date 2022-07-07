@@ -13,6 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @NoArgsConstructor
 @RequiredArgsConstructor
@@ -30,5 +31,6 @@ public class Plateforme {
 	@NotNull
 	@NonNull
 	@ManyToMany(mappedBy = "plateformes")
+	@ToString.Exclude
 	private List<Jeu> jeux;
 }

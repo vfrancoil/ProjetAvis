@@ -13,6 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @NoArgsConstructor
 @Data
@@ -28,5 +29,6 @@ public class Editeur {
 	@NotNull
 	@NonNull
 	@OneToMany(mappedBy = "editeur")
+	@ToString.Exclude
 	private List<Jeu> jeux;
 }
