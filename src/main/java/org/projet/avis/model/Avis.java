@@ -33,6 +33,7 @@ public class Avis {
 	private LocalDateTime dateModeration;
 	@ManyToOne
 	private Joueur joueur;
-	
+	@ManyToOne
+	private Moderateur moderateur;
 	
 }
